@@ -1,0 +1,16 @@
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+@import './variables';
+
+*{
+    box-sizing: border-box;
+}
+
+.bg-color-1{
+    background-color:$secundary-color ;
+}
+.bg-color-2{
+    background-color:$primary-color ;
+}
+.bg-color-3{
+    background-color:$primary-color-light ;
+}

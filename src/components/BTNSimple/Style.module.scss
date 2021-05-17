@@ -1,0 +1,15 @@
+@import './../../assets/Styles/variables';
+
+.btnColor{
+    background-color: $primary-color-blod;
+    color:$white-color;
+    border:none;
+    box-shadow: 0px 12px 18px -6px rgba(127,141,255,0.4);
+}
+
+.reverseBtnColor{
+    background-color: transparent;
+    background-color: $primary-color-blod;
+    border:none;
+    box-shadow: 0px 12px 18px -6px rgba(127,141,255,0.4);
+}

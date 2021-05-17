@@ -1,0 +1,18 @@
+.separador{
+    background-size: 100%;
+    margin-top: -3.5vw;
+    margin-bottom: 2.5vw;
+    position: relative;
+    height: 3.5vw;
+    z-index: 1;
+    background: url('../../assets/images/separador.svg');
+}
+.separadorTop{
+    background-size: 100%;
+    margin-top: -1.6vw;
+    margin-bottom: -2.5vw;
+    position: relative;
+    height: 2.5vw;
+    z-index: 1;
+    background: url('../../assets/images/separador-top.svg');
+}
