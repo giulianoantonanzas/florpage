@@ -18,9 +18,9 @@ const ThreeColorCard: React.FC<ThreeColorCardProps> = ({
   hasRedounded,
 }) => {
   return (
-    <div className="tree-color-card ">
+    <div className="tree-color-card">
       {hasRedounded && <Separator reverse={true} />}
-      <div className="d-flex">
+      <div className="d-flex flex-wrap">
         {data.map((item, i) => {
           return (
             <div key={i} className={`col-xl text-center bg-color-${i + 1} ${i%2!==0 && "text-white"}`} style={{padding:"7% 4%"}}>

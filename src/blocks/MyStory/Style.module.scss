@@ -3,7 +3,7 @@
 .myStory {
   display: flex;
   margin-left: 20%;
-  padding-bottom: 8%;
+  padding-bottom: 5%;
   padding-top: 2%;
   align-items: center;
   @media screen and (max-width: 768px) {
@@ -34,10 +34,25 @@
   margin-left: -40px;
   height: fit-content;
   transform: translateY(17%);
-  box-shadow: 0px 12px 18px -6px rgba(158, 158, 158, 0.4);
-  @media screen and (max-width: 768px){
+  //box-shadow: 0px 12px 18px -6px rgba(158, 158, 158, 0.4);
+  @media screen and (max-width: 768px) {
     min-width: unset;
     transform: none;
-    margin: 3% 10%!important;
+    margin: 3% 10% !important;
   }
+}
+
+.displayAnimationImage{
+  @keyframes DisplayImage {
+    from {
+      transform: translateX(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0px);
+      opacity: 1;
+    }
+  }
+  animation-name: DisplayImage;
+  animation-duration: 2s;
 }

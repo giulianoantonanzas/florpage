@@ -1,4 +1,6 @@
-import BTNSimple from "./../../components/BTNSimple"
+import { useRef} from "react";
+import useViewComponent from "../../hooks/useViewComponent";
+import BTNSimple from "./../../components/BTNSimple";
 import Style from "./Style.module.scss";
 
 export type MyStoryProps = {
@@ -18,17 +20,26 @@ const MyStory: React.FC<MyStoryProps> = ({
   buttonText,
   reverse,
 }) => {
+  const imageRef = useRef<HTMLDivElement>(null);
+  const activateAnimation = useViewComponent(imageRef)
+
   return (
-    <div className={`${Style.myStory} my-5`}>
-      <div className={`${Style.imageStory}`}>{image && <img src={image} alt="mi historia" />}</div>
-      <div className={`${Style.blockText} p-5`}>
-      {title && <h3>{title}</h3>}
-      {subTitle && <p>{subTitle}</p>}
-      {text && <p>{text}</p>}
-      {buttonText && <BTNSimple small={false} buttonText={buttonText} />}
+    <div className={`${Style.myStory} mt-5`}>
+      <div ref={imageRef} className={`${Style.imageStory}`}>
+        {image && (
+          <img
+            className={`${activateAnimation ? Style.displayAnimationImage : ""}`}
+            src={image}
+            alt="mi historia"
+          />
+        )}
       </div>
-
-
+      <div className={`${Style.blockText} p-5`}>
+        {title && <h2>{title}</h2>}
+        {subTitle && <p>{subTitle}</p>}
+        {text && <p>{text}</p>}
+        {buttonText && <BTNSimple small={false} buttonText={buttonText} />}
+      </div>
     </div>
   );
 };
